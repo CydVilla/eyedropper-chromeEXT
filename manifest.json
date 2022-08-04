@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "EmuTeamMate",
+  "description": "Chrome extension which aims to make web browsing easier by provides accessibility features.",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "js": ["polyfill.js", "ext.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "/images/HackIcon.png"
+  },
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*/",
+    "https://*/"
+  ]
+}
+
+
